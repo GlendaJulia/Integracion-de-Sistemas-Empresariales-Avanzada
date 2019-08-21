@@ -1,0 +1,58 @@
+
+4.
+4.1 Identificar el modulo
+	a) Gestion de Ausencias
+	b) Punto de  Venta
+	c) Facturacion
+
+TAREAS:
+1. Descripcion de la funcionalidad de los siguientes archivos y/o carpetas creados como parte del nuevo modulo.
+	__init__.py : Es como cualquier otro modulo de Python, ejecutado al inicio del programa. Aqui se importan los archivos de Python que
+			deben cargarse.
+	__manifest__.py: Es el manifiesto de nuestro modulo, este tiene el nombre, descripcion, archivo de datos para cargar, dependencias.
+	controllers: Los controladores son colocados en esta carpeta del modulo.
+	demo: Contiene los archivos de datos de demostracion(.xml). Estos datos son utiles cuando el usuario quiere ver las entradas en
+		nuestro modulo. Por ejemplo: factura de cliente, ordenes de venta, presupuestos. Solo se cargan si activamos la opcion 
+		"Cargar datos de demostración" al crear la base de datos.
+	models: Esta carpeta contiene los archivos .py. Todos los modelos de Python que creemos o heredemos estaran en este directorio,
+		por ejemplo:models.py
+	security: Esta carpeta se usa para dar permisos y roles de usuario. Estas se definen en un archivo xml y son colocados en esta
+		carpeta.
+	views: Esta carpeta tiene todos los archivos de vista(xml). El archivo de vista puede contener un formulario, arbol, vistas de 
+		busqueda, acciones, etc.
+
+
+OBSERVACIONES:
+Existen modulos que se instalan automaticamente al instalar un modulo, estos son los llamados modulos integrados.
+Al cambiar al modo desarrollador la apariencia de la interfaz se ve mas tecnica, ya que podemos ver mas caracteristicas de los campos, de los
+modulos, etc.
+Al crear un modulo mediante el comando scaffold ya tenemos todo lo necesario, las carpetas de controladores, modelos, vistas e incluso los 
+archivos de inicializacion y manifiesto. 
+Si vamos a agregar un modulo es necesario dar en "Actualizar lista de aplicaciones" para que nos aparezca el nuevo modulo en la lista,
+esto no actualizara los cambios en la aplicacion, para ello tenemos que entrar al modulo y hacer click en "Actualizar".
+Al instalar un modulo por primera vez siempre de instala el modulo de Debates, y al instalar o actualizar un modulo nos manda a la Vista de 
+Debates.
+Para instalar un modulo no necesitamos de internet. Siempre y cuando el servidor de Odoo este en nuestra maquina, si tenemos el servidor en
+Amazon y otro entonces si necesitamos tener acceso a internet.
+Existen muchisimos modulos, mas que aplicaciones, una aplicacion puede depender de varios modulos.
+
+CONCLUSIONES:
+
+Podemos crear sistemas de gestion, desde una tienda hasta una empresa grande, todo depende de los requerimientos que tenga esta. De acuerdo
+a estos requerimientos nosotros decidimos los modulos que vamos a necesitar.
+Las aplicaciones son los modulos mas desarrollados, es por ello que su instalacion demora mas. Asimismo, un modulo puede depender de una
+aplicacion (eso hace que la instale por si sola) 
+Scaffold es un comando de Odoo para crear rapidamente una plantilla para comenzar a contruir nuestro propio modulo en Odoo.
+Odoo sigue la arquitectura MVC(Modelo,Vista,Controlador) es por ello que tenemos esas carpetas al momento de crear los modulos.
+Se concluye que los modulos son como bloques para la construccion de aplicaciones. Un modulo puede agregar o modificar caracteristicas
+en Odoo, las aplicaciones funcionalmente proporcionan una caracteristica central, alrededor de la cual otros modulos agregan 
+caracteristicas u opciones.
+
+
+
+
+
+
+
+
+
