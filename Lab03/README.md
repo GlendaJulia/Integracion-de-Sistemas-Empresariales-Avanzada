@@ -3,10 +3,10 @@
 ## Desarrollo
 
 1.1. Inicio del software **Odoo**
-![odoo1](images/1.png)
+![odoo1](images/1.PNG)
 
 2.1. Localizamos el Modulo CRM
-![odoo2](images/2.png)
+![odoo2](images/2.PNG)
 
 
 ## Tarea
