@@ -1,8 +1,8 @@
-# Lab. 3: Creación de proyecto React
+# Lab. 3: CRM EN ODOO
 
 ## Desarrollo
 
-**1. Inicio del Software Odoo**
+###1. Inicio del Software Odoo
 
 1.1. Mostramos la pantalla de aplicaciones **Odoo**
 ![odoo1](images/1.PNG)
