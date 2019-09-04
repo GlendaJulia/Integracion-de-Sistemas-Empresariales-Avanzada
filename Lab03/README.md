@@ -49,6 +49,7 @@ Revisamos además las recomendaciones al final de la ventana anterior:
 
 3.9. Revisamos las opciones disponibles para definición de **Precios & descuentos**
 ![odoo14](images/14.PNG)
+
 Observamos las acciones sugeridas al final de la página:
 ![odoo15](images/15.PNG)
 
@@ -218,14 +219,47 @@ Los desplazamos a **Calificado**
 
 ## Tarea
 
-- Se completó el desarrollo del laboratorio.
+- Describa el procedimiento para importar contactos/clientes desde un archivo CSV (revise la documentación)
+
+1.1. Exportamos dos Clientes, con los Datos Nombre, Telefono y Email. El ID ses adicionara por defecto. Todo en formato CSV (todo ello sera para no tener que crear al archivo de cero, al menos ya tendremos las cabeceras)
+![odoo66](images/66.PNG)
+
+1.2. Visualizamos nuestro archivo CSV, cambiamos a los datos que queremos importar.
+![odoo67](images/67.PNG)
+
+1.3. Hacemos clic en Importar en la vista de la Lista. En la ventana Importar un Archivo, hacemos clic en  Cargar fichero, escogemos nuestro CSV
+![odoo68](images/68.PNG)
+
+1.4. Le damos en Probar importacion para verificar que todo este correcto.
+![odoo69](images/69.PNG)
+
+1.5. Una vez obtenido el mensaje de que todo esta OK, hacemos clic en Importar.
+![odoo70](images/70.PNG)
+
+1.6. Visualizamos en la Lista los datos importados.
+![odoo71](images/71.PNG)
+
+- Mejore la presentación del módulo Website instalado adicionando mayor cantidad de elementos disponibles en su editor. Adjunte imágenes del resultado obtenido.
+
+CAPTURAS:
+![odoo72](images/72.PNG)
+![odoo73](images/73.PNG)
+![odoo74](images/74.PNG)
+![odoo75](images/75.PNG)
+
+## Observaciones
+
+- Al parecer el tutorial del laboratorio corresponde a la version 8, actualmente trabajamos con la version 11 y podemos notar que existe varios cambios de esta version (8) a la usada(11).
+- Como fotos de contacto o imagenes, podía cargar GIF's y normal se mostraban en Odoo.
+- Con la nueva actualizacion existen mas campos en los formularios vistos en el laboratorio.
+- Al instalar un nuevo módulo, Odoo nos da una breve introduccion acerca de las herramientas y funcione que tiene este.
+- Dentro de los canales de Ventas para usarlos en una iniciativa debemos de tener marcado el check de Oportunidades dentro de su formulario.
+
 
 ## Conclusiones
 
-- **React JS** es una librería basada en componentes que nos ayuda a tener un desarrollo __ágil y completo__
-- Para instalar el cliente oficial de React, basta el comando:
-```
-npm install --global react-cli
-```
-- Dentro de nuestra carpeta **src** se encontrarán todos nuestros archivos.
-- Se adjunta el enlace para documentación básica de Markdown [https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+- **CRM** es la gestion de relaciones con clientes, vendría a ser una estrategia de Marketing y ventas. Es el software que las empresas utilizan para gestionar a esos clientes.
+- Con el **CRM** podemos registrar cada actividad inmediatamente en el gráfico de oportunidad con acciones predefinidas.
+- Dentro de Odoo podemos adicionar imagenes desde nuestro ordenador, puede ser formato PNG, JPEG, JPG.
+- Las oportunidades son ordenadas por priodad (estrellas) en el Tablero Kaban, eso da una mejor vista al usuario, para saber que oportunidades le combienen.
+- Con Odoo podemos crear un sitio web totalmente personalizable, podemos agregarle funciones a medida de que crezca.
