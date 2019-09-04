@@ -2,7 +2,7 @@
 
 ## Desarrollo
 
-###1. Inicio del Software Odoo
+### 1. Inicio del Software Odoo
 
 1.1. Mostramos la pantalla de aplicaciones **Odoo**
 ![odoo1](images/1.PNG)
