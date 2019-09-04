@@ -8,7 +8,7 @@
 ![odoo1](images/1.PNG)
 
 
-**2. Instalación del Módulo CRM**
+### 2. Instalación del Módulo CRM
 
 2.1. Localizamos el Modulo CRM
 ![odoo2](images/2.PNG)
@@ -19,7 +19,7 @@
 2.3. Hacemos click en dicho módulo para visualizar sus opciones
 ![odoo4](images/4.PNG)
 
-**3. Configuración ODOO CRM - Planificador de ventas**
+### 3. Configuración ODOO CRM - Planificador de ventas
 
 3.1. Hacecmos click en la barra de progreso para mstrar el asistente de configuracion del módulo
 ![odoo5](images/5.PNG)
@@ -71,7 +71,7 @@ Observamos las acciones sugeridas al final de la página:
 ![odoo21](images/21.PNG)
 
 
-**4. Configuración ODOO CRM - Clientes**
+### 4. Configuración ODOO CRM - Clientes
 
 4.1. Clic en la opción **Clientes** del **Tablero**
 ![odoo22](images/22.PNG)
@@ -92,7 +92,7 @@ Observamos las acciones sugeridas al final de la página:
 ![odoo27](images/27.PNG)
 
 
-**5. Equipo de Ventas - Equipo de ventas directas**
+### 5. Equipo de Ventas - Equipo de ventas directas
 
 5.1. Clic en la opción del tablero Canales de Ventas
 ![odoo28](images/28.PNG)
@@ -124,7 +124,7 @@ Observamos las acciones sugeridas al final de la página:
 5.10. Visualizamos nuevamente los **“Canales de Ventas”** y verificamos que el equipo de Ventas Directas tiene asignado un jefe de equipo: 
 ![odoo37](images/37.PNG)
 
-**6. Iniciativas y/o oportunidades en ODOO (Leads)**
+### 6. Iniciativas y/o oportunidades en ODOO (Leads)
 
 6.1. Vamos a **Ajustes** y activamos el estado de Iniciativas, luego clic en **Aplicar**
 ![odoo38](images/38.PNG)
@@ -152,7 +152,7 @@ Observamos las acciones sugeridas al final de la página:
 
 
 
-**Crear una nueva oportunidad**
+#### Crear una nueva oportunidad
 
 6.10. En el tablero active la vista **Kanban** y clic en **Crear**. Ingrese los datos del nuevo **Cliente**:
 ![odoo46](images/46.PNG)
@@ -170,7 +170,7 @@ Observamos las acciones sugeridas al final de la página:
 ![odoo50](images/50.PNG)
 
 
-**7. Generar iniciativas desde el sitio web de ODOO**
+### 7. Generar iniciativas desde el sitio web de ODOO
 
 7.1. Instalar el módulo **“Website Builder”**
 ![odoo51](images/51.PNG)
