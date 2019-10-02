@@ -1,8 +1,8 @@
-# Lab. 4: MÓDULO LOGÍSTICO EN ODOO
+# Lab. 6: MÓDULO COMPRAS EN ODOO
 
 ## Desarrollo
 
-### 1. Instalación de Módulo Inventarios.
+### 1. Instalación de Módulo Comrpras.
 1.1. Creamos una nueva Base de Datos
 
 ![odoo1](images/1.PNG)
@@ -11,242 +11,187 @@
 
 ![odoo2](images/2.PNG)
 
-1.3. Vemos la vista principal del módulo de inventarios
+### 2. Creación de Solicitud de presupuesto
+
+2.1. Buscaremos la opción Solicitudes de presupuesto dentro del módulo Compras y haremos click en Crear.
+
+2.2. La creación de  una Solicitud  de presupuesto suele ser  relativamente sencilla. Nos pedirá  los  datos básicos  como  quien  es  nuestro  proveedor,  los  productos  que  deseamos  adquirir,  sus  impuestos respectivos y el precio de compra.
 
 ![odoo3](images/3.PNG)
 
-### 2. Configuración de Almacenes
-
-2.1.En la parte inferior de los menús, tendremos la Gestión de Almacenes, donde encontraremos la opción Almacenes. Hacemos click en ella.
-
-2.2.Vemos un almacén creado llamado My Company. Este es el almacén por defecto creado por Odoo.
+2.3.Sin embargo, ya habrá notado que si intentamos escribir un precio con decimales (como en el ejemplo, que  compras  las manzanas  a  40  céntimos  la  unidad),  el  sistema  solicita  el  uso  de  la  coma  y  no  el punto   para   la   separación   decimal. Configuraremos   por   un   momento   dicho   separador   para acomodarnos a la realidad peruana (donde solemos usar el punto y nola coma).Estando  en  modo Desarrollador,  vamos  al  módulo  Ajustesy  buscamos  la  opciónIdiomas,  donde seleccionaremos el nuestro.
 
 ![odoo4](images/4.PNG)
 
-2.3.Vamos al menú Configuración
-2.4.Ya en el menú de configuraciones, buscaremos la opción **Multialmacén** y la seleccionaremos. Luego de esto, damos click en **Guardar** en la parte superior para que el cambio sea aplicado al sistema.
+Al  editar  el  idioma, veremos que  podemos modificar  no solamente el separador de  decimales, sino también  el  separador  de  millares  e  inclusive  la  forma  de  visualización  del  formato  de  fecha. Modifiquemos el separador de decimales para que use el punto, y el de millares para que use la coma. Guardemos e intentemos crear otra Solicitud de presupuesto, notará la diferencia en el uso.
 
 ![odoo5](images/5.PNG)
 
-2.5. Crearemos el Almacén Secundario con código SEC.
-
-2.6. Hacemos  click  en  el  botón al  costado del  campo  **Dirección**  (el  que  aparece  al  lado  de  My  Company). Veremos una pantalla de edición de contacto.
-
-2.7. En la parte inferior, haremos click en Crear, que está dentro de **Contactos y Direcciones**. Esta opción nos permite crear una nueva dirección para el mismo contacto.
+2.4. Podemos ver que al crear la solicitud de presupuesto se habilitan las opciones de Imprimir e incluso enviar por correo electrónico. Adjunte una imagen de cómo luce el correo en su bandeja y el adjunto generado.
 
 ![odoo6](images/6.PNG)
 
-2.8. Crearemos una dirección de envío.
+2.5. Si bien faltó mencionar, las solicitudes de presupuesto sirven para planificaradquisiciones de mercadería. En las pestañas de Entregas y facturas, podemos programar la fecha prevista, el plazo de pago al proveedor, la fecha de aprobación, etc.
 
 ![odoo7](images/7.PNG)
 
-2.9. Al darle click en **Guardar y Cerrar**, veremos que dicho contacto ha sido añadido a la pestaña de Contactos y Direcciones dentro de My Company.
+2.6. Validemos la Solicitud de presupuesto y veamos las nuevas opciones habilitadas. Se crea por defecto un envío (en caso tengamos productos que no sean servicios)y un botón para registro de las facturas del proveedor.
 
 ![odoo8](images/8.PNG)
 
-2.10. Damos click en guardar para volver a la edición del almacén. Ahora, al hacer click nuevamente en  My  Company,  el  menú  desplegable  mostrará  la  opción  de *Almacén  Los  Incas*,  que  es  la denominación que le dimos a nuestro almacén secundario.
+
+### 3. Recepción de compras
+
+3.1. Demos click en el botón Recibir productos. Nos llevará a un formulario de transferencia (como los vistos en el laboratorio 4de este curso).
 
 ![odoo9](images/9.PNG)
 
-2.11. Así  mismo,  veremos  que  se han  creado  automáticamente  rutas  para  dicho  almacén.
+3.2. La transferencia a la que hemos llegado tiene los datos para completar toda la compra de nuestro proveedor. Hay muchos casos en que nuestro proveedor hace entregas parciales, puede ser la mitad de mercadería un día, y a la semana siguiente el resto. Odoo contempla esto, y al intentar crear una entrega parcial, nos preguntará si deseamos confirmarla o darla por completa (sin pedido pendiente).
 
 ![odoo10](images/10.PNG)
 
-### 3. Tipos de operaciones
-
-3.1. En el submenú de **Gestión de Almacenes** encontraremos la opción Tipos de Operaciones. Estas son las operaciones permitidas por el sistema. Uno puede restringir a un usuario a solamente realizar  ciertas  operaciones  o  tener  acceso  a  todas,  dependiendo  del  almacén  en  el  que  trabajan. Haremos click en Recepciones del Almacén secundario para ver un poco más el detalle.
+3.3. Realice una entrega parcial y luego intente crear la segunda entrega del material solicitado. Se deberán visualizar ambas entregas en la Solicitud de Presupuesto.
 
 ![odoo11](images/11.PNG)
 
-![odoo12](images/12.PNG)
-
-3.2. Lo interesante de los tipos de operaciones es que ya tienen personalizadas las ubicaciones de origen y destino.
-
-![odoo13](images/13.PNG)
-
-3.3. Así mismo, cabe destacar  que en Configuración encontraremos una opción de Rutas Multietapa, lo que permite que,al realizar una operación, deba pasar por varias ubicaciones antes de considerarse completada.Esto nos  servirá  para  casos  en  los  que  los  productos  deben  pasar  por  almacenes  de control antes de llegar a su destino.
-
-![odoo14](images/14.PNG)
 
 ### 4. Gestión de Productos
 
-4.1. El menú de productos se encuentra dentro del submenú **Datos** principales.
+4.1. Proceda a crear una factura en la solicitud de presupuesto.Esta se creará en estado Borrador, así que podremos editar los datos importantes, como,por ejemplo, la referencia del proveedor (allí irá el número de la factura del proveedor), la fecha de factura, fecha de vencimiento, etc.Adjunte una imagen de lo que está dentro de la pestaña Otra información.Proceda luego a validar esta factura en borrador.
+
+![odoo12](images/12.PNG)
+
+4.2. La factura ahora podrá ser encontrada dentro de la Solicitud de presupuesto o incluso dentro del menú de Facturación, submenú Compras, Facturas de Proveedor. Fíjese que aparece con un monto A pagarque es precisamente la deuda que tiene la empresa con el proveedor.
+
+![odoo13](images/13.PNG)
+
+4.3. Si buscamos los detalles del proveedor (indique como llegó a este formulario)veremos que ahora aparece en su detalle una compra y una factura de proveedor.
+
+![odoo14](images/14.PNG)
+
+Así mismo, en la pestaña Ventas y Comprasdel formulario de detalle del proveedor podremos ver la sección Pagos, donde podremos registrar una cuenta bancaria del proveedor.Registre una cuenta para dicho proveedor y adjunte una imagen del proceso de creación.
 
 ![odoo15](images/15.PNG)
 
-4.2. Al crear un producto viene seleccionada por defecto la opción de Producto Almacenable. Esto habilita el  control  de  stock  y  le indica  a  Odoo  que  es  un  producto  cuyas  transferencias  deben  tener  un seguimiento, así como el stock a mano y previsto (ubicado en la parte superior de la ficha del mismo).
+4.4. Procederemos a volver a la factura y pagarla. Al igual que en el caso de las facturas de venta, veremos cómose registra el pago en la parte inferior de la misma.
 
 ![odoo16](images/16.PNG)
 
-4.3. Sin  embargo,  al  modificar  el  tipo  de  producto  a  servicio,  veremos cómo desaparecen  las  opciones relacionadas a stock.
+
+### 5. Tarifas de proveedores
+
+5.1. Vamos a la ficha de detalle de alguno de los productos adquiridos. Veremos que automáticamente Odoo ha registrado dentro de la pestaña de Comprasel proveedor del mismo y el precio al que nos lo ha entregado. Esta información sirve para hacer una comparación rápida entre proveedores.
 
 ![odoo17](images/17.PNG)
 
-4.4. Y al seleccionar Consumible, solamente se habilita el control de movimientos de productos, mas no el de stock ya que los consumibles son productos que no nos interesa controlar, por ejemplo, al comprar una resma de papel o un bidón de agua, no nos interesa saber cómo se consume.
+5.2. Procedemos a ir a Configuracióndentro del módulo de Compras y activar la opción Tarifas de compra.
 
 ![odoo18](images/18.PNG)
 
-4.5. Así  mismo,  en  la  pestaña  de  Inventario,  veremos  datos  adicionales  del  producto,  como  el  peso, volumen, plazo de entrega, etc.
+5.3. Se habilitará entonces un menú de Tarifas de Compra, en el que podremos establecer distintos precios para un mismo proveedor de acuerdo a las cantidades entregadas.Adjunteuna imagen con las tarifas de un proveedor para la venta de un mismo producto por unidad, docena, ciento y una tarifa válida para las mismas cantidades pero solamente válida en navidad.
 
 ![odoo19](images/19.PNG)
 
-4.6. Crearemos el producto manzana verde con los siguientes datos.
+### 6. Licitaciones
 
-![odoo20](images/20.PNG)
+6.1. Si bien ahora la solicitud de presupuesto nos ha ayudado para crear compras dirigidas, habrá empresas que inicien un proceso de licitación, es decir, empezar un concurso y escoger la compra dependiendo del mejor postor.En el menú Configuraciónde Compras, activaremos la opción Acuerdos de compra.
 
-4.7. Pasaremos  a  actualizar  el  stock  de  dicho  producto  haciendo  click  en  el  botón **Actualizar  cantidad disponible** ubicado en la parte superior del producto. Deberá setear 10 manzanas para el almacén principal y 5 para el secundario.
+![odoo20](images/21.PNG)
+
+6.2. En el menú Acuerdo de compra, cree un nuevo proceso dando click en Crear.
 
 ![odoo21](images/21.PNG)
 
+6.3. El Acuerdo de compra(o licitación)es muy parecido a la Solicitud de presupuesto, con la diferencia de que desde un inicio no se indica los precios a acordar ni el proveedor seleccionado.Cree una indicando una fecha límite y una fecha de entrega posteriores a la fecha actual, ya que seránlas fechas hasta cuando los proveedores pueden enviar sus propuestas, y la fecha en que deben entregar preferiblemente sus propuestas.
+
 ![odoo22](images/22.PNG)
 
-4.8. Luego de haber hecho dicho ajuste, al hacer click en la opción Stock a mano (que ahora indica 15), veremos el detalle de donde está dicho stock repartido.
+6.4. Después de haber creado nuestra licitación, procedamos a Confirmarla. Veremos que se habilita la opción de crear un Nuevo Presupuesto. Estas serán las propuestas de nuestros proveedores.
 
 ![odoo23](images/23.PNG)
 
-4.9. Otras opciones que tenemos dentro de la ficha del producto son la impresión de etiquetas, útiles para pegar en los anaqueles de venta.
+6.5. Hagamos click en Nuevo Presupuesto para ingresar una propuesta. Este ingreso se parecerá mucho a la solicitud de presupuesto que ya hemos creado antes.Proceda a crear al menos dos presupuestos más ligados a este proceso.
 
 ![odoo24](images/24.PNG)
 
-4.10. La opción de **Movimientos de producto**, nos permite rastrear cada traslado de dicho producto ya sea entre almacenes o salidas del mismo.
+6.6. Al volver a nuestra licitación, veremos cómo se contabilizan todas nuestras propuestas.
 
 ![odoo25](images/25.PNG)
 
-### 5.Importación y exportación masiva de productos
-
-5.1. Hemos visto la creación de productos uno a uno, pero en la vida real esto no es práctico al inicio de una implementación, ya que se debe tratar de importar masivamente varios productos.
-
-![odoo26](images/26.PNG)
-
-5.2. En  la  vista  de  productos,  haremos click  en  el  botón  Lista,  ubicado  a  la  derecha  debajo  del  filtro  de búsquedas.
-
-5.3. Seleccionaremos  todos  los  productos  ya parecerá  una  opción  llamada  Acción,  dentro  de  la  cual encontraremos **Exportar**. Haga click allí.
-
-![odoo27](images/27.PNG)
-
-5.4. La ventana de exportar nos mostrará un asistente para poder descargar en un formato amigable al usuario (CSV oExcel)la data seleccionada. Esta vista se encuentra en todas las vistas tipo listado del sistema, no solamente en la vista de productos, por lo que puede ser aprovechada para exportar todo tipo de dato.Así mismo, puede ver que todos los datos son exportables, inclusive datos que no vimos antes dentro de nuestro formulario de edición.
-
-![odoo28](images/28.PNG)
-
-5.5. Para nuestro caso, seleccionaremos el formato de exportación Excel y los campos Nombre, Costo y Precio de Venta.
+6.7. Valide el proceso e intente averiguar cómo elegir un ganador de este proceso. Odoo lo ayudará a elegir dicho ganador y seguir el proceso tradicional de la facturación y las entregas. Adjunte imágenes de todo lo relatado.
 
 ![odoo29](images/29.PNG)
 
-5.6. Al abrir el Excel generado después de dar click al botón Exportar, veremos algo parecido a la siguiente imagen. Procederemos a llenar productos nuevos, como,por ejemplo: naranja, plátano, limón, etc.
+![odoo28](images/28.PNG)
+
+![odoo27](images/27.PNG)
 
 ![odoo30](images/30.PNG)
 
-5.7. Una vez guardado nuestro archivo con las modificaciones mencionadas, haremos click en **Importar**. La ventana que veremos nos pedirá subir un archivo, por lo que seleccionaremos el antes modificado.
+### 7. Módulos de terceros
+
+7.1. Si ingresamos al [portal](https://apps.odoo.compodremos) acceder a todo el catálogo de módulos creados para Odoo. Hay todo tipo de módulo, de todo rubro, y al mismo tiempo, algunos tendrán un costo y otros serán gratuitos.
 
 ![odoo31](images/31.PNG)
 
-5.8. Al cargar el archivo, Odoo nos mostrará una vista previa de la información a importar, e incluso nos muestra un botón para **Probar importación** antes de dar click en Importar.Haga click en **Importar**.
+7.2. Buscaremos el módulo Top Buying Products. Escogeremos la segunda opción de la búsqueda (el resultado con el nombre tal cual hemos escrito)Estamos escogiendo este módulo ya que es uno gratuito.
 
 ![odoo32](images/32.PNG)
 
-5.9. Vealos cambios subidos al sistema. Los productos han sido creados con los atributos indicados. Como  nota  adicional,  para  modificarlos  en  masa,  puede  exportarlos  todos  con el  procedimiento  ya indicado, modificar el Excel y volverlo a importar.
+7.3. Al entrar en el módulo, encontraremos su licencia, nombre técnico, descripción e inclusive las versiones para las que es compatible (encontraremos en la tienda muchos módulos compatibles con la mayoría de versiones de Odoo).Hagamos click en el botón Download for 11.0 series y procedamos a descomprimir el zip descargado.Lo descomprimiremosen una carpeta deconveniencia nuestra (por ejemplo, la carpeta llamada odoo11 dentro de nuestra unidad D). Esta carpeta será donde descomprimiremos todos nuestros módulos de terceros.Nota:Los módulos se pueden descomprimir en la ubicación de los módulos originales de Odoo, pero no es una buena práctica ya que es recomendable separar lo original de la compañía con los módulos tercerizados.
 
 ![odoo33](images/33.PNG)
 
-### 6. Ajustes de inventarios.
+7.4. Para configurar la carpeta donde estamos poniendo nuestros módulos de terceros, deberemos hacer una modificación en la configuración de nuestro Odoo. Buscaremos en la carpeta de instalación del mismo el archivo odoo.conf(esto es válido para todo sistema operativo, busca la carpeta donde está instalado y abre ese archivo con el editor de tu preferencia, en el caso de Windows tal vez necesites abrirlo como Administrador)
 
-6.1. Hemos  creado  nuestros  productos  a  través  del  importador  pero  no  tienen  stock. Para  esto, realizaremos un ajuste de inventario.Vaya a dicha opción dentro del submenú Operaciones.
+7.5. Editaremos la línea con la variable llamada addons_path, le concatenaremos una coma (para separar ambas carpetas)y luego concatenaremos la ruta a nuestro directorio personalizado. Esto puede ser repetido para varias ubicaciones, Odoo no nos limita a solamente una o dos carpetas donde estén nuestros directorios. Proceda a guardar el archivo y luego reinicie el servicio de Odoo.
 
 ![odoo34](images/34.PNG)
 
-6.2. Haga click en la opción crear dentro del menú Ajustes de Inventarios.
+7.6. En modo Desarrollador, vaya al módulo de Aplicaciones, y de click en Actualizar lista de aplicaciones. Esto servirá para que Odoo pueda reconocer todo módulo nuevo en las ubicaciones antes listadas.
 
 ![odoo35](images/35.PNG)
 
-6.3. Le pondremos como nombre inventario inicial, y le daremos guardar e iniciar. Ahora  demos  click  en editar. Al  verla  parte  del detalle  del  inventario,  veremos cómo ha  jalado  los productos actuales, y en el caso de la manzana, ha jalado el stock teórico actual de dicho producto.
+7.7. Ahora si, al buscar el módulo Top Buying products deberá aparecer entre nuestros módulos. Proceda a instalarlo.
 
 ![odoo36](images/36.PNG)
 
-6.4. Modificaremos los stocks de los productos modificando el campo Cantidad real.
+7.8. El módulo que hemos seleccionado nos agrega una opción en Compras llamada Top Buying Productsque nos mostrará un asistente para poder crear un reporte de los productos más vendidos durante cierto periodo.
 
 ![odoo37](images/37.PNG)
 
-6.5. Hagamos click en **Validar** inventario para asentar dichos movimientos.
-6.6. Al volver a la vista de productos, veremos reflejado el ajuste al ver los nuevos stocks.
+7.9. Busque en la tienda de Odoo el módulo Toponimos de Perú. Proceda a descargarlo e instalarlo en su Odoo local. Tenga cuidado de descargar la versión adecuada (en este caso, la versión 11). Adjunte capturas de los cambios que implementa este módulo.
 
 ![odoo38](images/38.PNG)
 
-
-### 7. Transferencias internas
-
-7.1. Hagamos click en la opción Transferencias dentro de Operaciones.
-7.2. Procedemos a crear una nueva transferencia con algunos productos de ejemplo.
-
 ![odoo39](images/39.PNG)
 
-7.3. Tendremos  una  advertencia  al  guardar  ya  que  no  seleccionamos  el  tipo  de  operación. Vamos  a  la pestaña Info adicional.
-
-7.4. Seleccionaremos  la  opción  de  transferencias  internas  desde  *My  Company*,  y  cambiaremos  las ubicaciones de origen y destino tal como se muestra en la imagen.
+Con este modulo podemos configurar las direcciones pero con las ubicaciones de Perú para Departamentos, Provincias y Distritos.
 
 ![odoo40](images/40.PNG)
 
-7.5. Demos click en validar para hacer la transferencia válida. Como dato adicional, enla parte inferior de la transferencia, veremos el historial de las operaciones creadas a partir de dicho documento.
-
-![odoo41](images/41.PNG)
-
-7.6. Vamos  a  uno  de  los  productos  trasladados. Vemos  de  que  el  stock  sigue  siendo  el  mismo,  no  ha variado.
-
-![odoo42](images/42.PNG)
-
-7.7.Sin  embargo,  al  hacer  click  en  Stock  a  mano,  veremos  que  el  stock  ahora  está  repartido  en  dos ubicaciones, esto debido a la transferencia realizada.
-
-![odoo43](images/43.PNG)
-
-7.8.Cuando hacemos click en Tablero, vemos justamente todas las operaciones en proceso. Esto es útil para poder ver cuantas transferencias hay actualmente en camino a ser concretadas.
-
-![odoo44](images/44.PNG)
-
-### 8. Informes.
-
-8.1. En  el  submenú  informes  encontraremos  la  opción  de  Valoración,  la  que  nos  permitirá  valorizar  en dinero cuánto vale nuestro almacén actualmente o en la fecha seleccionada.
-8.2. También encontraremos la opción Inventario, que me permite saber rápidamente cuanto stock tengo de productos y así mismo, ver en que almacén tengo cuanto de cada uno.
-
-![odoo45](images/45.PNG)
-
-8.3. Finalmente, tenemos la opción Movimientos de producto, que nos muestra los movimientos de todos los productos en el sistema.
-
-![odoo46](images/46.PNG)
-
-## TAREA
-
-Habilite las opciones Atributos y variantes, y Unidades de medida. Vaya a la ficha de producto e indique las diferencias, así como adjunte imágenes de productos con varios atributos y/o unidades de medida distintas.
-
-![odoo47](images/47.PNG)
-
-1: UNIDAD DE MEDIDA
-![odoo48](images/48.PNG)
-![odoo50](images/50.PNG)
-
-2: VARIANTES
-![odoo49](images/49.PNG)
-![odoo51](images/51.PNG)
-
-Entre al menú Reglas de abastecimiento e intente crear una. Indique en que caso puede servir este proceso.
-
-![odoo52](images/52.PNG)
-
-CASO: Las reglas de abastecimientos son como condiciones que nos pone Odoo, por ejemplo:
-- Tenemos cantidad minima, que puede servir para cuando dentro de una tienda haya cierta cantidad de productos y necesite mas, el sistema ya notifica antes de que se acaben. 
-- Luego, tenemos cantidad maxima, esto es para que el usuario no haga compras excesivas llenando su stock innecesariamente. 
-- El plazo de entrega de un producto donde lo podemos medir por dias como vemos en la foto.
-
-
 
 ## OBSERVACIONES
-- Al no tener la opcion de multialmacén no podemos crear un almacén adicional dentro de nuestro sistema Odoo.
-- En el Menu de Inventario no se visualizo la Valoracion de Inventario que nos permite valorizar en dinero cuanto vale el almacén.
-- No se puede cambiar la unidad de medida una vez que se ha realizado un movimiento de mercancia. Si queremos cambiarlo si o si podemos desactivar y volver a activar el producto
-- Para escoger una regla de abastecimiento primero se selecciona el producto, solo a ese producto se aplican dichas reglas.
-- Siento que falto explorar mas las guias de remision en este laboratorio ya que tiene que ver con el movimiento del inventario.
+
+- Nosotros tenemos precio de venta y precio de compra en cada Producto, lo bueno de Odoo es que usa un precio distinto si es una cotizacion usa precio de venta y si es solicitud de presupuesto usa precio de compra.
+
+- A veces al hacer cambios en odoo.conf es necesario reinicar el servicio de Odoo, para asegurarnos de que los cambios se hicieron exitosamente.
+
+- el archivo odoo.conf solo se puede editar con permisos de administrador, yo en mi caso he tenido que agregar todos los permisos a odoo.conf para poder editarlo.
+
+- El modulo de Compras es muy similar al Modulo de ventas, ambos tiene presupuestos, los envian y al final confirman los pedidos para crear ordenes de entrega y facturas.
+
+- Podemos ubicar nuestros modulos externos en cualquier carpeta, o disco, siempre y cuando pongamos la direccion correcta en addons_path.
+
 
 ## CONCLUSIONES
-- Odoo nos presenta su modulo Inventario, que sirve para gestionar los productos que tiene determinadas empresas, que casi son la mayoria.
-- Este modulo se puede integrar con otros como pueden ser Ventas, Compras, Calidad, Contabilidad, etc.
-- Odoo nos da la opcion si el producto solo es vendido o solo comprado o ambos, ya que podemos tener cierto stock de los ingrediente y no necesariamente eso es lo que se vende.
-- El modulo de inventario nos da la opcion de exportar el codigo de barras, para imprimirlos y pegarlos en nuestro productos en caso el cliente lo desee.
-- Podemos tener multiples almacenes y hacer movimientos entre ellos, lo cual es completamente normal en toda empresa, gracias a Odoo estas transferencias son mas sencillas, ya que todo movimiento o accion esta registrada en la base de datos.
+
+- La Orden de Compra generará una factura, y dependiendo del contrato con el proveedor, usted tendrá que pagar la factura antes o después del envío.
+
+- Podemos crear entregas parciales, por si nuestro proveedor se quedo sin stock, al hacer eso tenemos mas de un orden de entrega. Tambien podemos crear condiciones de venta y especificar el almacen que recibira el lote de productos.
+
+- Lo Orden de Compra solo si es confirmada nos generará Ordenes de Entrega y Facturas.
+
+- Al recibir productos de una compra automaticamente el inventario se actualiza con la nueva llega del lote de productos. 
+
+- El modulo de Compras esta integrado con: Ventas, Inventario y Contabilidad.
