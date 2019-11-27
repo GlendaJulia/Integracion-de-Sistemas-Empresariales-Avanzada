@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="doc1" model="facturacion.documentos">
+            <field name="code">0</field>
+            <field name="name">Doc.trib.no.dom.sin.ruc</field>
+        </record>
+        <record id="doc2" model="facturacion.documentos">
+            <field name="code">1</field>
+            <field name="name">Doc. Nacional de identidad</field>
+        </record>
+        <record id="doc3" model="facturacion.documentos">
+            <field name="code">4</field>
+            <field name="name">Carnet de extranjería</field>
+        </record>
+        <record id="doc4" model="facturacion.documentos">
+            <field name="code">6</field>
+            <field name="name">Registro Único de contribuyentes</field>
+        </record>
+        <record id="doc5" model="facturacion.documentos">
+            <field name="code">7</field>
+            <field name="name">Pasaporte</field>
+        </record>
+        <record id="doc6" model="facturacion.documentos">
+            <field name="code">A</field>
+            <field name="name">Ced. Diplomática de identidad</field>
+        </record>
+        <record id="doc7" model="facturacion.documentos">
+            <field name="code">B</field>
+            <field name="name">Documento identidad país residencia-no.d</field>
+        </record>
+        <record id="doc8" model="facturacion.documentos">
+            <field name="code">C</field>
+            <field name="name">Tax Identification Number - TIN – Doc Trib PP.NN</field>
+        </record>
+        <record id="doc9" model="facturacion.documentos">
+            <field name="code">D</field>
+            <field name="name">Identification Number - IN – Doc Trib PP. JJ</field>
+        </record>
+        <record id="doc10" model="facturacion.documentos">
+            <field name="code">E</field>
+            <field name="name">TAM- Tarjeta Andina de Migración</field>
+        </record>
+    </data>
+</odoo>
