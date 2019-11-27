@@ -1,4 +1,4 @@
-# Lab. 9: LLAMADAS A APIS EXTERNAS
+# Lab. 10: LLAMADAS A APIS EXTERNAS
 
 ## Desarrollo
 
